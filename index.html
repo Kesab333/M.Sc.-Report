@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Report | V₂O₅-Doped Sodium Borosilicate Glass</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="M.Sc. Physics Thesis Portal: Synthesis and Characterization of V₂O₅-Doped Sodium Borosilicate Glass by Yash Vardhan Jha, NITK Surathkal. Explore interactive simulations and experimental spectroscopy data.">
+    <meta name="keywords" content="Borosilicate glass, Vanadium pentoxide, FTIR spectroscopy, UV-Vis spectroscopy, Tauc Plot, Glass density, M.Sc. Physics NITK">
+    <meta name="author" content="Yash Vardhan Jha">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- MathJax Configuration for inline dollars -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Top decorative glow bar -->
+    <div class="top-glow-bar"></div>
+    
+    <!-- Floating background graphics -->
+    <div class="bg-grid-glow"></div>
+    <div class="bg-lines"></div>
+
+    <div class="app-container">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ffffff;">
+                            <polygon points="12 2 22 7 22 17 12 22 2 17 2 7" stroke="rgba(255,255,255,0.95)" stroke-width="1.5"></polygon>
+                            <line x1="12" y1="22" x2="12" y2="12" stroke="rgba(255,255,255,0.6)" stroke-width="1"></line>
+                            <line x1="12" y1="2" x2="12" y2="12" stroke="rgba(255,255,255,0.6)" stroke-width="1"></line>
+                            <line x1="12" y1="12" x2="22" y2="7" stroke="rgba(255,255,255,0.6)" stroke-width="1"></line>
+                            <line x1="12" y1="12" x2="2" y2="7" stroke="rgba(255,255,255,0.6)" stroke-width="1"></line>
+                            <circle cx="12" cy="12" r="2.5" fill="#ffffff"></circle>
+                            <circle cx="12" cy="2" r="1.5" fill="#ffffff"></circle>
+                            <circle cx="22" cy="7" r="1.5" fill="#ffffff"></circle>
+                            <circle cx="22" cy="17" r="1.5" fill="#ffffff"></circle>
+                            <circle cx="12" cy="22" r="1.5" fill="#ffffff"></circle>
+                            <circle cx="2" cy="17" r="1.5" fill="#ffffff"></circle>
+                            <circle cx="2" cy="7" r="1.5" fill="#ffffff"></circle>
+                        </svg>
+                    </div>
+                    <div class="logo-info-text">
+                        <h2 class="logo-text" style="font-size: 0.82rem; font-weight: 800; letter-spacing: -0.2px; line-height: 1.25; margin-bottom: 0.15rem;">Material Processing Laboratory</h2>
+                        <span class="logo-subtext">M.Sc. Research</span>
+                    </div>
+                </div>
+                
+                <nav>
+                    <ul class="nav-links">
+                        <li class="nav-item active"><a href="#overview">Overview</a></li>
+                        <li class="nav-item"><a href="#theory">Theoretical Background</a></li>
+                        <li class="nav-item"><a href="#simulator">Interactive Simulator</a></li>
+                        <li class="nav-item"><a href="#methodology">Synthesis & Methodology</a></li>
+                        <li class="nav-item"><a href="#results">Results & Spectroscopy</a></li>
+                        <li class="nav-item"><a href="#calculator">Property Calculator</a></li>
+                        <li class="nav-item"><a href="#conclusion">Conclusion</a></li>
+                        <li class="nav-item"><a href="#references">References</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="sidebar-footer">
+                <button id="btn-theme" class="theme-toggle-sidebar" data-tooltip="Switch to Dark Mode">
+                    <span class="theme-icon">🌙</span>
+                    <span class="theme-text">Dark Mode</span>
+                </button>
+                <div class="author-badge">
+                    <div class="author-avatar">
+                        <img src="Fig/yash.png" class="author-avatar-img" alt="Yash Vardhan Jha">
+                    </div>
+                    <div class="author-info">
+                        <h4>Yash Vardhan Jha</h4>
+                        <p>NITK Surathkal - Physics</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            <!-- Official Top University Header -->
+            <header class="official-uni-header">
+                <div class="uni-logo-wrapper">
+                    <img src="Fig/nitk_logo.jpg" alt="NITK Logo" class="uni-logo-img">
+                </div>
+                <div class="uni-title-box">
+                    <h1 class="uni-name">National Institute of Technology Karnataka, Surathkal</h1>
+                    <span class="uni-subname">Department of Physics</span>
+                </div>
+            </header>
+            
+            <!-- OVERVIEW / HERO -->
+            <section id="overview" class="hero-wrapper">
+                
+                <h1 class="thesis-title">Synthesis and Characterization of V₂O₅-Doped Sodium Borosilicate Glass</h1>
+                
+                <div class="thesis-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Author</span>
+                        <span class="meta-value">Yash Vardhan Jha</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Project Guide</span>
+                        <span class="meta-value">Dr. Nagaraja H.S. (Professor)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Degree</span>
+                        <span class="meta-value">Master of Science in Physics</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Department</span>
+                        <span class="meta-value">Department of Physics, NITK</span>
+                    </div>
+                </div>
+
+                <!-- Research Team Profiles Row -->
+                <h3 style="margin-top: 3.5rem; margin-bottom: 1.5rem; text-align: center;">Research Team</h3>
+                <div class="team-profile-container">
+                    <div class="profile-card">
+                        <div class="profile-img-circle">
+                            <img src="Fig/yash.png" alt="Yash Vardhan Jha">
+                        </div>
+                        <span class="profile-name">Yash Vardhan Jha</span>
+                        <span class="profile-role">Author</span>
+                        <span class="profile-institution">M.Sc. Physics, NITK</span>
+                        <a href="https://www.researchgate.net/profile/Yash%20Vardhan%20Jha" target="_blank" class="profile-link">ResearchGate 🌐</a>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-img-circle">
+                            <img src="Fig/Nagaraja H.S..jpg" alt="Dr. Nagaraja H.S.">
+                        </div>
+                        <span class="profile-name">Dr. Nagaraja H.S.</span>
+                        <span class="profile-role">Project Guide</span>
+                        <span class="profile-institution">Professor, Physics, NITK</span>
+                        <a href="https://scholar.google.com/citations?user=_dHdU7EAAAAJ&hl=en" target="_blank" class="profile-link">Google Scholar 🎓</a>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-img-circle">
+                            <img src="Fig/Vasundhara-Raghuvanshi.webp" alt="Mrs. Vasundhara Raghuvanshi">
+                        </div>
+                        <span class="profile-name">Mrs. Vasundhara Raghuvanshi</span>
+                        <span class="profile-role">Co-Guide</span>
+                        <span class="profile-institution">Research Scholar, NITK</span>
+                        <a href="https://www.researchgate.net/profile/Vasundhara-Raghuvanshi" target="_blank" class="profile-link">ResearchGate 🌐</a>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-img-circle">
+                            <img src="Fig/Rashmi I.jpg" alt="Mrs. Rashmi I.">
+                        </div>
+                        <span class="profile-name">Mrs. Rashmi I.</span>
+                        <span class="profile-role">Co-Guide</span>
+                        <span class="profile-institution">Research Scholar, NITK</span>
+                        <a href="https://www.researchgate.net/profile/Rashmi-I" target="_blank" class="profile-link">ResearchGate 🌐</a>
+                    </div>
+                </div>
+
+                <div class="glass-card accent-glow-cyan" style="margin-top: 3rem;">
+                    <h2>Abstract</h2>
+                    <p>This study investigates the influence of vanadium pentoxide (V₂O₅) doping on the physical properties of a <strong>35SiO₂–30B₂O₃–(35–x)Na₂O–xV₂O₅</strong> glass system, where $x = 0$, 1.0, 1.5, and 2.0 mol%. Glass samples were prepared using the conventional melt-quenching technique, and their densities were measured using Archimedes’ principle.</p>
+                    <p>XRD patterns confirmed the amorphous nature of all samples, while FTIR spectra revealed characteristic vibrations associated with Si–O–Si, borate units (BO₃/BO₄), and vanadate structural groups (VO₄/VO₅). UV-Vis spectroscopy demonstrated that vanadium addition modifies the optical absorption edge and introduces a broad visible absorption tail, consistent with mixed-valence vanadium species. The results suggest a concentration-dependent structural role for V₂O₅, involving both vanadate network formation and local rearrangement of the borosilicate host matrix.</p>
+                </div>
+            </section>
+
+            <!-- THEORETICAL BACKGROUND -->
+            <section id="theory">
+                <h2>Theoretical Background</h2>
+                <p>The study of oxide glasses centers on understanding their disordered, yet highly structured local environments. In a complex multi-former system, different chemical constituents adopt specialized structural roles.</p>
+                
+                <div class="two-column-grid" style="margin-top: 2rem;">
+                    <div>
+                        <h3>Roles of Oxides in Glass</h3>
+                        <p>Oxides are traditionally categorized based on their roles in shaping the randomized continuous network:</p>
+                        <ul>
+                            <li><strong>Network Formers</strong> (e.g., SiO₂, B₂O₃): Oxides that can independently form rigid, highly cross-linked three-dimensional networks built by corners-sharing polyhedra.</li>
+                            <li><strong>Network Modifiers</strong> (e.g., Na₂O): Ionic oxides that do not form networks but break bridging oxygen (BO) bonds, introducing Non-Bridging Oxygens (NBOs) to depolymerize the network, reducing viscosity and melting point.</li>
+                            <li><strong>Intermediate Oxides</strong> (e.g., V₂O₅): Versatile oxides that act as formers or modifiers depending on concentration and basicity. Vanadium ions can occupy multiple coordination environments (tetrahedral VO₄ or pyramidal VO₅).</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="figure-wrapper">
+                        <img src="Fig/Schematic two-dimensional (2D) representation of the silica random network built by SiO4 tetrahedra.png" alt="Random Network Theory" class="figure-img">
+                        <span class="figure-caption"><strong>Fig 2.1</strong>: Zachariasen's random network model of a glass (b) contrasted with its ordered, crystalline counterpart (a).</span>
+                    </div>
+                </div>
+
+                <div class="two-column-grid" style="margin-top: 3rem;">
+                    <div class="figure-wrapper">
+                        <img src="Fig/(a) Structure of crystalline B2O3 formed by BO3 triangles and (b) boroxol uni.png" alt="Borate Anomaly" class="figure-img">
+                        <span class="figure-caption"><strong>Fig 2.2</strong>: Structure of boron trioxide: (a) BO₃ triangles, (b) boroxol rings, the building blocks of vitreous B₂O₃.</span>
+                    </div>
+                    
+                    <div>
+                        <h3>The Borate Anomaly & Network Modifiers</h3>
+                        <p>In silicates, adding Na₂O immediately breaks bonds and makes the structure looser. However, in borates, adding small amounts of Na₂O converts trigonal <strong>BO₃</strong> units into rigid tetrahedral <strong>BO₄</strong> units, which increases network connectivity. This phenomenon is known as the <strong>Borate Anomaly</strong>. </p>
+                        <p>In sodium borosilicate glasses, Na⁺ ions play a double role: charge-balancing BO₄⁻ tetrahedra and creating NBOs on silicate units. The introduction of V₂O₅ creates a complex, competing mixed-former environment governed by the <strong>Mixed Glass Former Effect (MGFE)</strong>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTERACTIVE SIMULATOR -->
+            <section id="simulator">
+                <h2>Interactive Glass Doping Simulator</h2>
+                <p>Use the concentration slider to simulate the additions of V₂O₅ ($x$ mol%) into the sodium borosilicate matrix. Observe the visual changes in the glass samples and trace how the physical properties update dynamically according to experimental data.</p>
+
+                <div class="glass-card simulator-layout">
+                    <!-- Glass disc graphic visualizer -->
+                    <div class="glass-disc-container">
+                        <div class="disc-visualizer-wrapper">
+                            <div class="disc-side">
+                                <span class="disc-side-title">3D Representation</span>
+                                <div class="glass-disc" id="glass-disc"></div>
+                            </div>
+                            <div class="disc-side">
+                                <span class="disc-side-title">Real Sample</span>
+                                <div class="prepared-sample-img-box">
+                                    <img id="sample-img" src="Fig/1.jpeg" alt="Glass Sample">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass-disc-info" id="disc-label">Sample Model</div>
+                    </div>
+                    
+                    <!-- Control panel -->
+                    <div class="simulator-panel">
+                        <div class="control-group">
+                            <div class="control-label-wrapper">
+                                <span class="control-title">Doping Concentration (x)</span>
+                                <span class="control-value"><span id="slider-x-val">0.0</span> mol% V₂O₅</span>
+                            </div>
+                            
+                            <input type="range" id="sim-slider" min="0" max="3" step="1" value="0" class="slider-input">
+                            
+                            <div class="slider-ticks">
+                                <span class="tick-label" data-val="0">0.0% (BS)</span>
+                                <span class="tick-label" data-val="1">1.0% (BSV1)</span>
+                                <span class="tick-label" data-val="1.5">1.5% (BSV1.5)</span>
+                                <span class="tick-label" data-val="2">2.0% (BSV2)</span>
+                            </div>
+                        </div>
+
+                        <div class="dynamic-metrics">
+                            <div class="metric-card highlight">
+                                <span class="metric-label" data-tooltip="Glass density measured via Archimedes' method">Density (ρ)</span>
+                                <div class="metric-value-wrapper">
+                                    <span class="metric-number" id="val-density">2.4506</span>
+                                    <span class="metric-unit">g/cm³</span>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-label" data-tooltip="Space occupied by one mole of glass">Molar Volume (V_m)</span>
+                                <div class="metric-value-wrapper">
+                                    <span class="metric-number" id="val-molar-vol">25.9572</span>
+                                    <span class="metric-unit">cm³/mol</span>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-label" data-tooltip="Indirect optical band gap from Tauc Plot">Band Gap (E_g)</span>
+                                <div class="metric-value-wrapper">
+                                    <span class="metric-number" id="val-band-gap">2.71</span>
+                                    <span class="metric-unit">eV</span>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-label" data-tooltip="Oxygen packing density in glass matrix">OPD</span>
+                                <div class="metric-value-wrapper">
+                                    <span class="metric-number" id="val-opd">45.24</span>
+                                    <span class="metric-unit">×10²² at/cm³</span>
+                                </div>
+                            </div>
+                            <!-- Added to prevent JS error and display Oxygen Molar Volume -->
+                            <div class="metric-card" style="grid-column: span 2;">
+                                <span class="metric-label" data-tooltip="Oxygen molar volume in glass matrix">Oxygen Molar Vol (V_o)</span>
+                                <div class="metric-value-wrapper">
+                                    <span class="metric-number" id="val-omv">13.3114</span>
+                                    <span class="metric-unit">cm³/mol</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dynamic-role-card">
+                            <div class="dynamic-role-title">Structural Role: <span id="val-role">Base Glass Matrix</span></div>
+                            <p class="dynamic-role-desc" id="val-desc">Clean, colorless glass network without dopants. Serves as reference host.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="font-size: 0.9rem; text-align: center; color: var(--text-muted); margin-top: 1rem;">
+                    <strong>Chemical Formula Unit:</strong> <span class="chem-formula" id="val-formula">35SiO₂ - 30B₂O₃ - 35Na₂O</span>
+                </div>
+            </section>
+
+            <!-- METHODOLOGY & SYNTHESIS -->
+            <section id="methodology">
+                <h2>Synthesis & Experimental Methodology</h2>
+                <p>The glasses were prepared using the conventional high-temperature <strong>melt-quenching technique</strong> in the Material Processing Laboratory at the Department of Physics, NITK Surathkal.</p>
+                
+                <div class="glass-card">
+                    <h3>Synthesis Workflow</h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                        <div style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-glass); padding: 1.25rem; border-radius: 10px;">
+                            <h4 style="color:var(--accent-cyan); margin-bottom:0.5rem;">1. Calcination</h4>
+                            <p style="font-size:0.85rem; margin-bottom:0;">Stoichiometric amounts of H₃BO₃ and Na₂CO₃ calcined in muffle furnace at 400°C for 2 hours to eliminate moisture and CO₂ gas.</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-glass); padding: 1.25rem; border-radius: 10px;">
+                            <h4 style="color:var(--accent-cyan); margin-bottom:0.5rem;">2. Grinding & Mixing</h4>
+                            <p style="font-size:0.85rem; margin-bottom:0;">Calcined borates ground with high-purity SiO₂ and V₂O₅ powders in an agate mortar for 30 minutes to form a homogeneous precursor batch.</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-glass); padding: 1.25rem; border-radius: 10px;">
+                            <h4 style="color:var(--accent-cyan); margin-bottom:0.5rem;">3. High-Temp Melting</h4>
+                            <p style="font-size:0.85rem; margin-bottom:0;">Precursor melted in an alumina crucible using a muffle furnace at 1150°C for 30 minutes to ensure a completely bubble-free, molten oxide liquid.</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-glass); padding: 1.25rem; border-radius: 10px;">
+                            <h4 style="color:var(--accent-cyan); margin-bottom:0.5rem;">4. Pouring & Annealing</h4>
+                            <p style="font-size:0.85rem; margin-bottom:0;">Poured onto a pre-heated stainless steel mould, pressed to form discs, and annealed at 350°C for 2 hours to relieve internal stresses.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="two-column-grid" style="margin-top: 2rem;">
+                    <div>
+                        <h3>Batch Calculation & Stoichiometry</h3>
+                        <p>Reagent weight calculations represent volatile loss of carbonate and acid forms (yielding B₂O₃ and Na₂O respectively). Table 3.1 details the calculations for a total batch size of 10 g.</p>
+                        
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sample Code</th>
+                                        <th>SiO₂ (g)</th>
+                                        <th>H₃BO₃ (g)</th>
+                                        <th>Na₂CO₃ (g)</th>
+                                        <th>V₂O₅ (g)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>BS</strong> (0%)</td>
+                                        <td>3.410</td>
+                                        <td>5.825</td>
+                                        <td>5.831</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>BSV1</strong> (1.0%)</td>
+                                        <td>3.245</td>
+                                        <td>5.722</td>
+                                        <td>5.562</td>
+                                        <td>0.281</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>BSV1.5</strong> (1.5%)</td>
+                                        <td>3.215</td>
+                                        <td>5.672</td>
+                                        <td>5.425</td>
+                                        <td>0.417</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>BSV2</strong> (2.0%)</td>
+                                        <td>3.186</td>
+                                        <td>5.621</td>
+                                        <td>5.288</td>
+                                        <td>0.550</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="figure-wrapper">
+                        <img src="Fig/Chemicals Used.jpg" alt="Lab Reagents" class="figure-img" style="max-height:220px; object-fit:cover;">
+                        <span class="figure-caption"><strong>Fig 3.1</strong>: High-purity starting chemicals utilized in the synthesis of doped borosilicate glasses.</span>
+                    </div>
+                </div>
+
+                <div class="two-column-grid" style="margin-top: 2.5rem; align-items: center;">
+                    <div>
+                        <h3>Melt-Quenching Synthesis Process</h3>
+                        <p>The conventional high-temperature <strong>melt-quenching method</strong> was employed for the synthesis. The process consists of a sequence of thermal and mechanical stages designed to yield completely uniform, amorphous solid matrices:</p>
+                        <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                            <li><strong>Calcination Stage</strong>: Heating starting chemicals like $\text{H}_3\text{BO}_3$ and $\text{Na}_2\text{CO}_3$ at 400°C to release volatile water vapor and carbon dioxide.</li>
+                            <li><strong>Agate Mortar Homogenization</strong>: Grinding the calcined borate components together with pure $\text{SiO}_2$ and dopant $\text{V}_2\text{O}_5$ for 30 minutes to establish an extremely homogenous precursor mix.</li>
+                            <li><strong>High-Temperature Fusion</strong>: Melting the batch in a high-purity alumina crucible in a muffle furnace at 1150°C for 30 minutes. This thermal treatment produces a bubble-free, low-viscosity liquid oxide melt.</li>
+                            <li><strong>Quenching & Relieving Stress</strong>: Casting the fluid melt onto a mirror-smooth stainless steel mold preheated to 300°C, and then rapidly transferring the solidified discs to an annealing furnace at 350°C for 2 hours. This thermal treatment relieves all mechanical stress to prevent fractures.</li>
+                        </ul>
+                    </div>
+                    <div class="figure-wrapper">
+                        <img src="Fig/Schematic-representation-of-glass-making-by-melt-quenching-process.png" alt="Melt Quenching Process Schematic" class="figure-img">
+                        <span class="figure-caption"><strong>Fig 3.2</strong>: Schematic flowchart representing the high-temperature melt-quenching glass preparation steps.</span>
+                    </div>
+                </div>
+
+                <div class="two-column-grid" style="margin-top: 3rem; align-items: center;">
+                    <div class="figure-wrapper">
+                        <img src="Fig/Schematics-Archimedes-method-for-measuring-the-density-of-the-sample.png" alt="Archimedes Method Diagram" class="figure-img">
+                        <span class="figure-caption"><strong>Fig 3.3</strong>: Schematic setup for density determination of glass samples via Archimedes' liquid displacement technique.</span>
+                    </div>
+                    <div>
+                        <h3>Density Measurement via Archimedes' Principle</h3>
+                        <p>To trace structural changes and density alterations in the glass network, experimental densities ($\rho$) were determined using liquid displacement based on <strong>Archimedes' principle</strong> at room temperature.</p>
+                        <p>The samples were weighed in air ($W_a$) and then submerged in a high-purity immersion liquid ($W_l$) of known density. <strong>o-Xylene</strong> ($\text{C}_8\text{H}_{10}$) was selected as the immersion medium due to its extremely low water absorption and stable density ($\rho_l = 0.86 \text{ g/cm}^3$ at 25°C).</p>
+                        <p>The experimental density is calculated using the relation:</p>
+                        <div style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-glass); padding: 1rem; border-radius: 8px; font-family: var(--font-code); font-size: 0.95rem; margin-bottom: 1rem; text-align: center;">
+                            $$\rho = \frac{W_a}{W_a - W_l} \times \rho_l$$
+                        </div>
+                        <p>Once density is established, the <strong>Molar Volume</strong> ($V_m$), <strong>Oxygen Packing Density</strong> (OPD), and <strong>Oxygen Molar Volume</strong> ($V_o$) are computed as follows:</p>
+                        <div style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-glass); padding: 1rem; border-radius: 8px; font-family: var(--font-code); font-size: 0.95rem; text-align: center;">
+                            $$V_m = \frac{M}{\rho} \quad \text{OPD} = \frac{1000 \cdot \rho \cdot n_O}{M} \quad V_o = \frac{V_m}{n_O}$$
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Where $M$ is the formula weight and $n_O$ is the number of oxygen atoms in the chemical formula unit.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 4rem; margin-bottom: 2rem; text-align: center; color: var(--accent-cyan);">Phase, Structural & Optical Characterization Suite</h3>
+
+                <div class="glass-card" style="margin-bottom: 2.5rem;">
+                    <div class="two-column-grid" style="align-items: center; gap: 2rem;">
+                        <div>
+                            <h4 style="color: var(--accent-cyan); margin-bottom: 1rem; font-size: 1.35rem;">1. Phase Confirmation via X-Ray Powder Diffraction (XRD)</h4>
+                            <p>To confirm that the prepared glass samples were completely amorphous and free of any micro-crystalline or phase-separated domains, <strong>X-Ray Powder Diffraction (XRD)</strong> was carried out.</p>
+                            <p>Measurements were conducted using a benchtop <strong>Rigaku MiniFlex 600 diffractometer</strong> equipped with a $\text{Cu K}\alpha$ radiation source ($\lambda = 1.5418$ Å). Diffractograms were recorded in the scan range of $2\theta = 10^\circ \text{ to } 80^\circ$ at a step size of $0.02^\circ$. Bragg's law conditions govern the peak formation:</p>
+                            <div style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-glass); padding: 0.75rem; border-radius: 8px; font-family: var(--font-code); font-size: 0.9rem; text-align: center; margin-bottom: 1rem;">
+                                $$2d\sin\theta = n\lambda$$
+                            </div>
+                            <p>For amorphous glasses, the absence of periodic lattice planes prevents constructive interference, resulting in broad diffusion features (amorphous halos) instead of sharp Bragg diffraction peaks.</p>
+                        </div>
+                        <div class="figure-wrapper" style="width: 100%;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; width: 100%; align-items: center;">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <img src="Fig/Schematic-diagram-of-XRD.png" alt="XRD Diffraction Optical Path Schematic" class="figure-img" style="max-height: 180px; object-fit: contain; width: 100%;">
+                                    <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; font-weight: 500;">(a) Bragg Scattering Path</span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem; width: 100%; border-radius: 6px; overflow: hidden; background: #0f172a; padding: 0.25rem;">
+                                        <img src="Fig/XRD/Base (2).jpg" alt="XRD Base" style="width: 100%; height: 75px; object-fit: cover;">
+                                        <img src="Fig/XRD/1 percent (2).jpg" alt="XRD 1%" style="width: 100%; height: 75px; object-fit: cover;">
+                                        <img src="Fig/XRD/1.5 percent (2).jpg" alt="XRD 1.5%" style="width: 100%; height: 75px; object-fit: cover;">
+                                        <img src="Fig/XRD/2 percent (2).jpg" alt="XRD 2%" style="width: 100%; height: 75px; object-fit: cover;">
+                                    </div>
+                                    <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; font-weight: 500;">(b) Measured Diffractograms</span>
+                                </div>
+                            </div>
+                            <span class="figure-caption"><strong>Fig 3.4</strong>: XRD instrument scattering schematic (left) and resulting amorphous glass diffractograms (right).</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card" style="margin-bottom: 2.5rem;">
+                    <div class="two-column-grid" style="align-items: center; gap: 2rem;">
+                        <div class="figure-wrapper" style="width: 100%;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; width: 100%; align-items: center;">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <img src="Fig/FTIR schematic.png" alt="FTIR Instrumentation Path Schematic" class="figure-img" style="max-height: 180px; object-fit: contain; width: 100%;">
+                                    <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; font-weight: 500;">(a) Michelson Interferometer</span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <img src="Fig/FTIR/FTIR.png" alt="Experimental FTIR Spectra" class="figure-img" style="max-height: 160px; object-fit: contain; width: 100%;">
+                                    <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; font-weight: 500;">(b) Experimental IR Spectra</span>
+                                </div>
+                            </div>
+                            <span class="figure-caption"><strong>Fig 3.5</strong>: Michelson interferometer optical path (left) and measured mid-IR transmittance spectra (right).</span>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--accent-cyan); margin-bottom: 1rem; font-size: 1.35rem;">2. Vibrational Fingerprinting via FTIR Spectroscopy</h4>
+                            <p>The local atomic structure and coordination environments of the glass networks were probed using <strong>Fourier Transform Infrared (FTIR) Spectroscopy</strong>.</p>
+                            <p>FTIR mid-IR spectra were collected using a high-precision spectrometer in the wavenumber range of <strong>400 to 4000 cm⁻¹</strong>. Measurements were carried out using an <strong>Attenuated Total Reflectance (ATR)</strong> accessory. Infrared absorption bands arise from localized vibrational modes, allowing us to trace the coordination of boron (trigonal $\text{BO}_3$ vs tetrahedral $\text{BO}_4$ units), silica linkages ($\text{Si-O-Si}$ bending and stretching), and the network-forming/modifying roles of vanadium polyhedra ($\text{VO}_4/\text{VO}_5$).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card" style="margin-bottom: 2rem;">
+                    <div class="two-column-grid" style="align-items: center; gap: 2rem;">
+                        <div>
+                            <h4 style="color: var(--accent-cyan); margin-bottom: 1rem; font-size: 1.35rem;">3. Electronic Transitions & Bandgap via UV-Vis Spectroscopy</h4>
+                            <p>To analyze the optical transparency, the absorption edge, and electronic transitions inside the glasses, <strong>UV-Vis Spectrophotometry</strong> was employed.</p>
+                            <p>Optical absorption spectra were recorded in the ultraviolet and visible wavelength range of <strong>190 to 900 nm</strong> using a high-resolution double-beam spectrophotometer. The absorption coefficient ($\alpha$) is calculated from absorbance data, and the <strong>optical bandgap</strong> ($E_g$) is evaluated using <strong>Tauc's relation</strong> for indirect allowed transitions:</p>
+                            <div style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-glass); padding: 0.75rem; border-radius: 8px; font-family: var(--font-code); font-size: 0.9rem; text-align: center; margin-bottom: 1rem;">
+                                $$\alpha h\nu = B(h\nu - E_g)^2$$
+                            </div>
+                            <p>Plotting $(\alpha h\nu)^{1/2}$ versus photon energy ($h\nu$) and extrapolating the linear region of the absorption edge to the energy axis yields the indirect optical bandgap.</p>
+                        </div>
+                        <div class="figure-wrapper" style="width: 100%;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; width: 100%; align-items: center;">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <img src="Fig/UV schematics.png" alt="UV-Vis Spectrophotometer Double Beam Schematic" class="figure-img" style="max-height: 180px; object-fit: contain; width: 100%;">
+                                    <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; font-weight: 500;">(a) Double-Beam Optical Bench</span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem; width: 100%;">
+                                        <img src="Fig/UV-Vis, Indirect/Uv vis.png" alt="UV Vis curves" style="width: 100%; height: 75px; object-fit: contain; border-radius: 4px;">
+                                        <img src="Fig/UV-Vis, Indirect/tauc_indirect.png" alt="Tauc plots" style="width: 100%; height: 75px; object-fit: contain; border-radius: 4px;">
+                                    </div>
+                                    <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; font-weight: 500;">(b) Measured UV & Tauc Plot</span>
+                                </div>
+                            </div>
+                            <span class="figure-caption"><strong>Fig 3.6</strong>: Double-beam spectrophotometer optical layout (left) and experimental absorbance & Tauc plots (right).</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESULTS & SPECTROSCOPY -->
+            <section id="results">
+                <h2>Experimental Results & Characterization</h2>
+                <p>Toggle through the tabs to investigate key structural and optical measurements gathered from your synthesized glasses.</p>
+
+                <div class="tab-container">
+                    <div class="tab-nav">
+                        <button class="tab-btn active" data-tab="tab-photos">Visual Inspection</button>
+                        <button class="tab-btn" data-tab="tab-xrd">XRD Analysis</button>
+                        <button class="tab-btn" data-tab="tab-ftir">FTIR Spectroscopy</button>
+                        <button class="tab-btn" data-tab="tab-uv">UV-Vis & Tauc Plot</button>
+                        <button class="tab-btn" data-tab="tab-density">Density & Molar Vol</button>
+                    </div>
+
+                    <!-- Panel 1: Photos -->
+                    <div class="tab-panel active" id="tab-photos">
+                        <div class="two-column-grid">
+                            <div>
+                                <h3>Visual Analysis of Glass Discs</h3>
+                                <p>Photograph in Fig 4.1 shows the successfully prepared glass discs. The base glass is completely colorless and glass-transparent. Adding V₂O₅ imparts a distinct amber and yellowish-brown tint that deepens with dopant concentration (x = 1.0, 1.5, 2.0 mol%).</p>
+                                <p>All prepared samples exhibit notable homogeneity, mirror-smooth surfaces, and high transparency, confirming the complete absence of phase separation or micro-crystallization.</p>
+                            </div>
+                            <div class="figure-wrapper">
+                                <img src="Fig/1.jpeg" alt="Synthesized glasses photograph" class="figure-img">
+                                <span class="figure-caption"><strong>Fig 4.1</strong>: Synthesized sodium borosilicate glass discs. (L to R): BS (0%), BSV1 (1%), BSV1.5 (1.5%), BSV2 (2.0%).</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: XRD -->
+                    <div class="tab-panel" id="tab-xrd">
+                        <div class="two-column-grid">
+                            <div>
+                                <h3>X-Ray Powder Diffraction</h3>
+                                <p>The structural status of the synthesized glasses was tested using Rigaku XRD analysis. XRD patterns for both the base and doped glasses show a lack of sharp diffraction peaks.</p>
+                                <p>Instead, all samples show a wide, broad diffusion halo centered around $2\theta = 20^\circ - 35^\circ$. This broad halo is a signature of the long-range atomic disorder and amorphous solid structure of the borosilicate matrix, confirming excellent glass formation across the entire doping range.</p>
+                            </div>
+                            <div class="figure-wrapper" style="background:#0f172a;">
+                                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; width:100%;">
+                                    <img src="Fig/XRD/Base (2).jpg" alt="XRD BS" style="width:100%; border-radius:4px;">
+                                    <img src="Fig/XRD/1 percent (2).jpg" alt="XRD BSV1" style="width:100%; border-radius:4px;">
+                                    <img src="Fig/XRD/1.5 percent (2).jpg" alt="XRD BSV1.5" style="width:100%; border-radius:4px;">
+                                    <img src="Fig/XRD/2 percent (2).jpg" alt="XRD BSV2" style="width:100%; border-radius:4px;">
+                                </div>
+                                <span class="figure-caption"><strong>Fig 4.2</strong>: Diffractograms for all prepared glass compositions confirming completely amorphous structure.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: FTIR -->
+                    <div class="tab-panel" id="tab-ftir">
+                        <div class="two-column-grid">
+                            <div>
+                                <h3>FTIR Structural Fingerprint</h3>
+                                <p>FTIR mid-IR spectra (400-4000 cm⁻¹) probe the local network configurations of our sodium borosilicate glasses. The principal absorption bands reveal three major structural vibrational zones:</p>
+                                <ul>
+                                    <li><strong>450 - 600 cm⁻¹</strong>: Bending vibrations of Si–O–Si and Si–O–B linkages, coupled with low-frequency bridging modes from V–O–V bending vibrations (~525 cm⁻¹).</li>
+                                    <li><strong>800 - 1150 cm⁻¹</strong>: The most intense envelope, comprising overlapping Si–O–Si asymmetric stretching (shoulder at ~1100 cm⁻¹) and tetrahedral stretching of BO₄⁻ (minimum at ~988 cm⁻¹) and VO₄ units.</li>
+                                    <li><strong>1200 - 1500 cm⁻¹</strong>: Vibrations from asymmetric B–O stretching in trigonal BO₃ units (peaks around ~1460 cm⁻¹).</li>
+                                </ul>
+                                <p>The addition of V₂O₅ introduces localized changes. In particular, the emergence of vanadyl (V=O) stretching at ~936 cm⁻¹ and V–O–V bending at ~525 cm⁻¹ confirms vanadium's incorporation. The shift of the BO₃ asymmetric stretch (~1460 → 1421 cm⁻¹) and BO₄ stretch (~988 → 1003 cm⁻¹) verifies structural modifications, where Na₂O and V₂O₅ act in concert to induce BO₄ → BO₃ speciation changes (back-conversion of boron coordination).</p>
+                            </div>
+                            <div class="figure-wrapper">
+                                <img src="Fig/FTIR/FTIR.png" alt="FTIR Spectra" class="figure-img" style="max-height:300px; object-fit:contain;">
+                                <span class="figure-caption"><strong>Fig 4.3</strong>: Combined FTIR transmission spectra across the synthesized glass series.</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 2.5rem;">
+                            <h4 style="color: var(--accent-cyan); margin-bottom: 1rem;">Table 4.2: Digitized FTIR Transmittance Values vs. Wavenumber</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Representative excerpt of digitized data points extracted across the key absorption zones for all compositions.</p>
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Wavenumber (cm⁻¹)</th>
+                                            <th>Base Glass %T</th>
+                                            <th>BSV1.0 %T</th>
+                                            <th>BSV1.5 %T</th>
+                                            <th>BSV2.0 %T</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>4000</strong></td>
+                                            <td>29.26%</td>
+                                            <td>1.06%</td>
+                                            <td>22.84%</td>
+                                            <td>2.15%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>3452</strong> (O–H stretch)</td>
+                                            <td>19.95%</td>
+                                            <td>0.72%</td>
+                                            <td>15.19%</td>
+                                            <td>0.85%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>2934</strong></td>
+                                            <td>28.61%</td>
+                                            <td>1.01%</td>
+                                            <td>22.29%</td>
+                                            <td>2.09%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>1628</strong> (H–O–H bend)</td>
+                                            <td>22.33%</td>
+                                            <td>1.05%</td>
+                                            <td>16.76%</td>
+                                            <td>2.08%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>1460</strong> (BO₃ asymmetric)</td>
+                                            <td>18.60%</td>
+                                            <td>0.96%</td>
+                                            <td>12.76%</td>
+                                            <td>1.00%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>1300</strong></td>
+                                            <td>21.26%</td>
+                                            <td>0.99%</td>
+                                            <td>14.69%</td>
+                                            <td>1.02%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>1100</strong> (Si–O–Si stretch)</td>
+                                            <td>16.92%</td>
+                                            <td>0.98%</td>
+                                            <td>12.53%</td>
+                                            <td>0.96%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>988</strong> (BO₄ stretch)</td>
+                                            <td>15.92%</td>
+                                            <td>0.94%</td>
+                                            <td>11.83%</td>
+                                            <td>1.03%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>800</strong> (Si–O–Si bend)</td>
+                                            <td>20.71%</td>
+                                            <td>0.98%</td>
+                                            <td>15.60%</td>
+                                            <td>1.00%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>686</strong> (B–O–B bend)</td>
+                                            <td>23.34%</td>
+                                            <td>1.04%</td>
+                                            <td>17.84%</td>
+                                            <td>0.99%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>525</strong> (V–O–V bend)</td>
+                                            <td>28.51%</td>
+                                            <td>0.67%</td>
+                                            <td>22.71%</td>
+                                            <td>0.63%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 3rem;">
+                            <h4 style="color: var(--accent-cyan); margin-bottom: 1rem;">Table 4.3: Select FTIR Vibrational Band Shifts (Base vs. BSV1.5)</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Quantitative comparison summarizing structural rearrangements, wavenumber shifts, and absolute intensity variations.</p>
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Band Assignment</th>
+                                            <th>Base Center (cm⁻¹) [%T]</th>
+                                            <th>BSV1.5 Center (cm⁻¹) [%T]</th>
+                                            <th>Shift (cm⁻¹)</th>
+                                            <th>ΔT% (Absolute)</th>
+                                            <th>Remark & Structural Interpretation</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>O–H Stretch (~3450)</strong></td>
+                                            <td>3452 (19.95%)</td>
+                                            <td>3452 (15.19%)</td>
+                                            <td>0</td>
+                                            <td>-4.76%</td>
+                                            <td>Hydrogen bonded surface hydroxyls / molecular water</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>H–O–H Bend (~1630)</strong></td>
+                                            <td>1628 (22.33%)</td>
+                                            <td>1627 (16.76%)</td>
+                                            <td>-1</td>
+                                            <td>-5.57%</td>
+                                            <td>Deformation vibrations of adsorbed molecular water</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>BO₃ Stretch (~1460)</strong></td>
+                                            <td>1460 (18.60%)</td>
+                                            <td>1421 (12.58%)</td>
+                                            <td>-39</td>
+                                            <td>-6.02%</td>
+                                            <td>Asymmetric stretching modes of trigonal BO₃ units</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>BO₄ Stretch (~988)</strong></td>
+                                            <td>988 (15.92%)</td>
+                                            <td>1003 (11.83%)</td>
+                                            <td>+15</td>
+                                            <td>-4.09%</td>
+                                            <td>Tetrahedral stretching of BO₄⁻; overlaps VO₄ modes</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Si–O–Si (~800)</strong></td>
+                                            <td>800 (20.71%)</td>
+                                            <td>800 (15.60%)</td>
+                                            <td>0</td>
+                                            <td>-5.11%</td>
+                                            <td>Symmetric bending vibrations of Si–O–Si bonds</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>V=O Stretch (~936)</strong></td>
+                                            <td>936 (16.35%)</td>
+                                            <td>936 (12.56%)</td>
+                                            <td>0</td>
+                                            <td>-3.79%</td>
+                                            <td>Vibrational mode of short vanadyl (V=O) bonds in VO₄/VO₅</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>B–O–B Bend (~686)</strong></td>
+                                            <td>686 (23.34%)</td>
+                                            <td>686 (17.84%)</td>
+                                            <td>0</td>
+                                            <td>-5.50%</td>
+                                            <td>Bending of B–O–B linkages in borate networks</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>V–O–V Bend (525)</strong></td>
+                                            <td>525 (28.51%)</td>
+                                            <td>525 (22.71%)</td>
+                                            <td>0</td>
+                                            <td>-5.80%</td>
+                                            <td>Bending vibrations of bridging V–O–V vanadate linkages</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Si–O–Si Bend (~470)</strong></td>
+                                            <td>470 (28.17%)</td>
+                                            <td>470 (21.98%)</td>
+                                            <td>0</td>
+                                            <td>-6.19%</td>
+                                            <td>Bridging oxygen bond bending inside silicate matrix</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4: UV-Vis & Tauc -->
+                    <div class="tab-panel" id="tab-uv">
+                        <div class="two-column-grid">
+                            <div>
+                                <h3>Electronic Transitions & Band Gap</h3>
+                                <p>Optical absorption edge behavior was analyzed using UV-Vis transmittance. The base glass features a sharp UV cut-off. Doped glasses display a significant broadening of the absorption edge and a visible tail extending into longer wavelengths.</p>
+                                <p>This change arises from ligand-to-metal oxygen-to-vanadium charge transfer ($O^{2-} \rightarrow V^{5+}$) and electronic transitions inside mixed-valence vanadium species ($V^{4+} \leftrightarrow V^{5+}$ coexisting in the network).</p>
+                                <p>The localized $d-d$ transitions inside $V^{4+}$ ions (vanadyl states) along with localized structural disorder lead to the formation of localized defect tail states (Urbach tail) inside the mobility gap, which narrows the optical bandgap.</p>
+                                
+                                <h4 style="margin-top:1.5rem; color:var(--accent-amber); margin-bottom: 0.5rem;">Tauc Band-Gap Estimation:</h4>
+                                <p>Extracting indirect allowed transition values using $(\alpha h\nu)^{1/2}$ extrapolation confirms a concentration-dependent redshift in the band edge as vanadium ions increase, reaching a minimum at 1.5 mol% before undergoing a slight recovery due to structural relaxation and former-modifier equilibration at 2.0 mol%.</p>
+                            </div>
+                            <div class="figure-wrapper">
+                                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; width:100%;">
+                                    <img src="Fig/UV-Vis, Indirect/Uv vis.png" alt="UV Vis curves" style="width:100%; border-radius:4px;">
+                                    <img src="Fig/UV-Vis, Indirect/tauc_indirect.png" alt="Tauc plots" style="width:100%; border-radius:4px;">
+                                </div>
+                                <span class="figure-caption"><strong>Fig 4.4</strong>: UV-Vis absorbance profiles (left) and corresponding Tauc band-gap extrapolations (right).</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 2.5rem;">
+                            <h4 style="color: var(--accent-cyan); margin-bottom: 1rem;">Table 4.4: Indirect Allowed Optical Bandgap (E_g) Parameters</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Experimentally determined and fitted indirect allowed optical bandgap energy values with their respective fitting uncertainties.</p>
+                            <div class="table-wrapper" style="max-width: 600px;">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Sample Code</th>
+                                            <th>Dopant Concentration (mol% V₂O₅)</th>
+                                            <th>Fitted Indirect E_g (eV)</th>
+                                            <th>Experimental Deviation & Uncertainty (eV)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Base Glass (BS)</strong></td>
+                                            <td>0.0 mol%</td>
+                                            <td><strong>2.72 eV</strong></td>
+                                            <td>2.7 ± 0.1 eV</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>BSV1.0</strong></td>
+                                            <td>1.0 mol%</td>
+                                            <td><strong>2.09 eV</strong></td>
+                                            <td>2.1 ± 0.1 eV</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>BSV1.5</strong></td>
+                                            <td>1.5 mol%</td>
+                                            <td><strong>2.01 eV</strong></td>
+                                            <td>2.0 ± 0.1 eV</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>BSV2.0</strong></td>
+                                            <td>2.0 mol%</td>
+                                            <td><strong>2.18 eV</strong></td>
+                                            <td>2.2 ± 0.1 eV</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 5: Density -->
+                    <div class="tab-panel" id="tab-density">
+                        <div class="two-column-grid">
+                            <div>
+                                <h3>Density & Molar Volume Analysis</h3>
+                                <p>The density ($\rho$) displays a complex non-monotonic profile (Fig 4.5), while the Molar Volume ($V_m$) increases progressively from 25.96 to 26.89 cm³/mol due to the mass addition of heavier V₂O₅ replacing Na₂O.</p>
+                                
+                                <p><strong>Physical Interpretation:</strong></p>
+                                <ul>
+                                    <li>At <strong>1.0 mol%</strong>, V⁵⁺ acts as a network former (forming VO₄ units), compacting the matrix and raising the density.</li>
+                                    <li>At <strong>1.5 mol%</strong>, vanadium transitions into a network modifier, breaking bridging bonds, creating NBOs, and lowering the density to 2.4483 g/cm³.</li>
+                                    <li>At <strong>2.0 mol%</strong>, a structural balance is restored, creating conditional network linkages and raising density again.</li>
+                                </ul>
+                            </div>
+                            <div class="figure-wrapper">
+                                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.5rem; width:100%;">
+                                    <img src="Fig/Density, OPD OMV/Density.jpg" alt="Density graph" style="width:100%; border-radius:4px;">
+                                    <img src="Fig/Density, OPD OMV/OMD and OMV.jpeg" alt="OPD graph" style="width:100%; border-radius:4px;">
+                                </div>
+                                <span class="figure-caption"><strong>Fig 4.5</strong>: Density / Molar Volume trend (left) and Oxygen Packing parameters correlation (right).</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTERACTIVE PROPERTY CALCULATOR -->
+            <section id="calculator">
+                <h2>Interactive Physical Properties Calculator</h2>
+                <p>Input a custom V₂O₅ concentration ($x$ mol%) within your experimental series boundary (0.0 to 2.0 mol%) to calculate the theoretical Molecular Weight and predicted structural metrics, modeled using polynomial interpolation of your experimental data.</p>
+                
+                <div class="glass-card calc-wrapper" style="margin-top: 2rem;">
+                    <div class="calc-form">
+                        <div class="form-group">
+                            <label class="form-label" for="calc-x">Dopant Concentration (x)</label>
+                            <div class="input-container">
+                                <input type="number" id="calc-x" min="0" max="2.0" step="0.1" value="1.0" class="form-input">
+                                <span class="input-suffix">mol% V₂O₅</span>
+                            </div>
+                            <small style="color:var(--text-muted); margin-top:0.25rem;">Enter a value between 0.0 and 2.0</small>
+                        </div>
+                        
+                        <div style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-glass); padding: 1rem; border-radius: 8px; font-size: 0.85rem;">
+                            <strong>Formula used for M.W.:</strong><br>
+                            $M = 0.35 \cdot M_{\text{SiO}_2} + 0.30 \cdot M_{\text{B}_2\text{O}_3} + (0.35 - x/100) \cdot M_{\text{Na}_2\text{O}} + (x/100) \cdot M_{\text{V}_2\text{O}_5}$<br>
+                            $M = 63.607 + 1.199x \text{ g/mol}$
+                        </div>
+                        
+                        <button type="button" id="calc-btn" class="calc-btn">Compute Physical Metrics</button>
+                    </div>
+
+                    <div class="calc-results">
+                        <div id="calc-placeholder" class="calc-placeholder">
+                            <div class="calc-placeholder-icon">⚙️</div>
+                            <p>Enter a V₂O₅ doping level on the left and click calculate to view predicted properties.</p>
+                        </div>
+                        
+                        <div id="calc-display" style="display: none; flex-direction: column; gap: 1.25rem;">
+                            <h3 style="color: var(--accent-cyan); border-bottom: 1px solid var(--border-glass); padding-bottom: 0.5rem; margin-bottom: 0.25rem;">Predicted Structural Parameters</h3>
+                            
+                            <div class="result-row">
+                                <span class="result-label">Formula Weight (M)</span>
+                                <div class="result-val-wrapper">
+                                    <span class="result-number" id="out-mw">64.806</span>
+                                    <span class="result-unit">g/mol</span>
+                                </div>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">O Atoms per unit (n_O)</span>
+                                <div class="result-val-wrapper">
+                                    <span class="result-number" id="out-oatoms">1.990</span>
+                                    <span class="result-unit">atoms</span>
+                                </div>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Predicted Density (ρ)</span>
+                                <div class="result-val-wrapper">
+                                    <span class="result-number" id="out-density">2.4565</span>
+                                    <span class="result-unit">g/cm³</span>
+                                </div>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Predicted Molar Volume (V_m)</span>
+                                <div class="result-val-wrapper">
+                                    <span class="result-number" id="out-molar-vol">26.3827</span>
+                                    <span class="result-unit">cm³/mol</span>
+                                </div>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Oxygen Packing Density (OPD)</span>
+                                <div class="result-val-wrapper">
+                                    <span class="result-number" id="out-opd">45.42</span>
+                                    <span class="result-unit">×10²² at/cm³</span>
+                                </div>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Oxygen Molar Volume (V_o)</span>
+                                <div class="result-val-wrapper">
+                                    <span class="result-number" id="out-omv">13.2576</span>
+                                    <span class="result-unit">cm³/mol</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- CONCLUSION -->
+            <section id="conclusion">
+                <h2>Conclusions & Future Scope</h2>
+                
+                <div class="glass-card">
+                    <h3>Summary of Key Findings</h3>
+                    <p>The systematic experimental investigation led to the following principal outcomes:</p>
+                    <ul style="margin-left:1.5rem; margin-bottom:1.5rem;">
+                        <li><strong>Successful Synthesis:</strong> Transparent and homogeneous glasses were successfully prepared via the melt-quench method up to 2.0 mol% V₂O₅ content.</li>
+                        <li><strong>Amorphous Phase Status:</strong> Broad diffusion halo XRD patterns confirmed the lack of long-range periodic structures across the entire range.</li>
+                        <li><strong>Vibrational Fingerprints:</strong> Combined FTIR features revealed a mixed silicate-borate-vanadate network with active BO₃ ↔ BO₄ conversion.</li>
+                        <li><strong>Optical Absorption Edge Redshift:</strong> Band gap values mapped a non-monotonic profile, dropping from 2.71 eV to a minimum of 2.50 eV (BSV1.5) before showing partial recovery.</li>
+                        <li><strong>Density Trend:</strong> Density showed a non-monotonic profile, reflecting a competition between network-forming roles at low concentrations and network-modifying roles at intermediate doping levels.</li>
+                    </ul>
+                    
+                    <h3 style="margin-top:2rem;">Future Scope</h3>
+                    <p>To construct a highly comprehensive model of transition-metal-ion valence and transport in these glasses, the following future investigations are proposed:</p>
+                    <ul style="margin-left:1.5rem;">
+                        <li><strong>Electron Paramagnetic Resonance (EPR):</strong> EPR characterization to identify and quantify the paramagnetic $V^{4+}$ valence fraction relative to diamagnetic $V^{5+}$.</li>
+                        <li><strong>Temperature-Dependent Conductivity:</strong> DC/AC impedance spectroscopy to study polaronic hopping mechanisms ($V^{4+} \leftrightarrow V^{5+}$) and charge transport.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- REFERENCES & LITERATURE -->
+            <section id="references">
+                <h2>References & Referred Literature</h2>
+                <p>Key literature, textbooks, and peer-reviewed journals referred to during the research, synthesis, and characterization phases of this study.</p>
+
+                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Comprehensive Literature Survey</h3>
+                <p>A structured literature analysis of key published research articles investigating vanadium doping inside borate, silicate, and borosilicate networks, validating our experimental findings.</p>
+                
+                <div class="glass-card" style="margin-bottom: 3.5rem;">
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="min-width: 150px;">Material / Chemical System</th>
+                                    <th style="min-width: 130px;">Experimental Methods</th>
+                                    <th style="min-width: 120px;">Target Applications</th>
+                                    <th style="min-width: 250px;">Key Findings & Results</th>
+                                    <th style="min-width: 160px;">Performance Metrics</th>
+                                    <th style="min-width: 150px;">Scientific Reference</th>
+                                    <th style="min-width: 200px;">Core Takeaway</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>BaO–P₂O₅–B₂O₃</strong> + x V₂O₅ (x = 0–5 mol%)</td>
+                                    <td>Melt-quench, XRD, FTIR, Raman, UV-Vis, PL spectroscopy</td>
+                                    <td>Optical filters, white-light luminescent displays</td>
+                                    <td>Identified multiple valence states ($V^{3+}/V^{4+}/V^{5+}$); observed bandgap reduction via Tauc plots; strong blue/white photoluminescence tuning.</td>
+                                    <td>$\sim 1.0\text{ mol% } V_2O_5$ yields balanced near-white (CIE) coordinates.</td>
+                                    <td>Rashmi et al., <em>Ceramics International</em>, 2024 (External Reference)</td>
+                                    <td>Vanadium doping permits fine-tuning of energy bandgap and photoluminescence emission profiles.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>(Pb_x Ca_{1-x})TiO₃–SiO₂–B₂O₃</strong> + 1% V₂O₅</td>
+                                    <td>Melt-quench, XRD, FTIR, Raman, UV-Vis, SEM, NMR</td>
+                                    <td>Glass network structural modifications</td>
+                                    <td>Confirmed completely amorphous structures; FTIR and Raman reveal B–O, Pb–O, and V–O bond formations; bandgap decreases from 2.07 to 1.65 eV with more PbO; NMR displays NBO increment.</td>
+                                    <td>Proven role of $V_2O_5$ in introducing additional network modifying species and narrowing mobility gap.</td>
+                                    <td>Das et al., <em>Journal of Physics and Chemistry of Solids</em>, 2019 (External Reference)</td>
+                                    <td>Low concentration ($1\%$) vanadium doping acts as a powerful modifier, increasing non-bridging oxygen concentration.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Na₂O–B₂O₃</strong> + V⁵⁺ ions</td>
+                                    <td>Melt-quench, high-power Laser photochromic testing</td>
+                                    <td>High-density 3D optical storage systems</td>
+                                    <td>$V^{5+}$-doped sodium borate glass demonstrates high-contrast, completely reversible laser-induced photochromism.</td>
+                                    <td>Achieved volumetric optical data storage density of $\sim 480\text{ Mbit/cm}^3$ using low-cost laser sources.</td>
+                                    <td>Li et al., <em>Laser & Photonics Reviews</em>, 2023 (External Reference)</td>
+                                    <td>Vanadium coordination changes enable reversible, photo-activated color transitions for optical memory.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Li₂O–ZnO–B₂O₃–SiO₂</strong> + x V₂O₅</td>
+                                    <td>Melt-quench, XRD, UV-Vis, Density, Gamma shielding tests</td>
+                                    <td>High-efficiency radiation shielding barriers</td>
+                                    <td>Density and effective atomic number ($Z_{eff}$) rise progressively with $V_2O_5$ content; improved UV block and increased gamma attenuation.</td>
+                                    <td>Yields significantly higher linear/mass attenuation coefficients ($\mu$) and highly adjustable optical blocking.</td>
+                                    <td>Alotaibi et al., <em>Optik</em>, 2024 (External Reference)</td>
+                                    <td>High atomic weight vanadium pentoxide increases density and packing factor, boosting radiation shielding capacity.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Na₂O–B₂O₃–SiO₂</strong> + 1% Eu₂O₃ + (1% V₂O₃ or V₂O₅)</td>
+                                    <td>Melt-quench, XRD, UV-Vis, Photoluminescence (PL)</td>
+                                    <td>Multi-color LED phosphors, laser hosts</td>
+                                    <td>Vanadium inclusion strongly raises visible absorption edge; $V^{4+}$ transitions act as emission quenchers; observed energy transfer from $V^{5+} \rightarrow Eu^{3+}$.</td>
+                                    <td>Highly tunable red/blue-green luminescence useful for advanced solid-state multi-color lighting.</td>
+                                    <td>Mao et al., <em>Optik</em>, 2021 (External Reference)</td>
+                                    <td>Low-level vanadium additions modify rare-earth luminescence efficiency through complex valence state interactions.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Books Referred Curved Gallery -->
+                <div class="books-grid" style="margin-top: 2rem; margin-bottom: 3.5rem;">
+                    <!-- Book 1 -->
+                    <div class="book-card">
+                        <div class="book-cover-box">
+                            <img src="Fig/Books Reffered/Arun K. Varshneya.jpg" alt="Fundamentals of Inorganic Glasses">
+                        </div>
+                        <div class="book-meta">
+                            <span class="book-title">Fundamentals of Inorganic Glasses</span>
+                            <span class="book-author">Arun K. Varshneya</span>
+                        </div>
+                        <a href="https://www.amazon.in/Fundamentals-Inorganic-Glasses-Arun-Varshneya/dp/0128162252" target="_blank" class="book-link">
+                            Buy on Amazon 🛒
+                        </a>
+                    </div>
+                    <!-- Book 2 -->
+                    <div class="book-card">
+                        <div class="book-cover-box">
+                            <img src="Fig/Books Reffered/B. D. Cullity.webp" alt="Elements of X-ray Diffraction">
+                        </div>
+                        <div class="book-meta">
+                            <span class="book-title">Elements of X-ray Diffraction</span>
+                            <span class="book-author">B. D. Cullity</span>
+                        </div>
+                        <a href="https://www.flipkart.com/elements-x-ray-diffraction/p/itm702e390308a19" target="_blank" class="book-link">
+                            Buy on Flipkart 🛒
+                        </a>
+                    </div>
+                    <!-- Book 3 -->
+                    <div class="book-card">
+                        <div class="book-cover-box">
+                            <img src="Fig/Books Reffered/Borate Glasses Structure, Properties, Applications Volume 12.jpg" alt="Borate Glasses: Structure, Properties, Applications">
+                        </div>
+                        <div class="book-meta">
+                            <span class="book-title">Borate Glasses: Structure, Properties, Applications</span>
+                            <span class="book-author font-size: 0.75rem;">L. David Pye (Ed.)</span>
+                        </div>
+                        <a href="https://www.amazon.in/Borate-Glasses-Structure-Properties-Applications/dp/0306400162" target="_blank" class="book-link">
+                            Buy on Amazon 🛒
+                        </a>
+                    </div>
+                    <!-- Book 4 -->
+                    <div class="book-card">
+                        <div class="book-cover-box">
+                            <img src="Fig/Books Reffered/J.E. Shelby.jpg" alt="Introduction to Glass Science and Technology">
+                        </div>
+                        <div class="book-meta">
+                            <span class="book-title">Introduction to Glass Science & Technology</span>
+                            <span class="book-author">J. E. Shelby</span>
+                        </div>
+                        <a href="https://www.amazon.in/Introduction-Glass-Science-Technology-Paperbacks/dp/0854046399" target="_blank" class="book-link">
+                            Buy on Amazon 🛒
+                        </a>
+                    </div>
+                </div>
+
+                <h3>Academic References</h3>
+                <div class="glass-card" style="margin-top: 1.5rem;">
+                    <ul class="references-list">
+                        <li class="ref-item">
+                            I, R., Ingle, A., Raghuvanshi, V., Shashikala, H. D., and Nagaraja, H. S. (2023). Influence of V₂O₅ addition as a dopant and dispersed content in barium borophosphate glass on structural and optical properties. <em>Journal of Non-Crystalline Solids</em>, 616:122461.
+                            <br><a href="https://doi.org/10.1016/j.jnoncrysol.2023.122461" class="ref-doi" target="_blank">https://doi.org/10.1016/j.jnoncrysol.2023.122461</a>
+                        </li>
+                        <li class="ref-item">
+                            I, R., Raghuvanshi, V., Ingle, A., Shashikala, H. D., and Nagaraja, H. S. (2025). Influence of low concentrations of vanadium and titanium ions on the structural and optical properties of borophosphate glasses. <em>Optical Materials</em>, 167:117271.
+                            <br><a href="https://doi.org/10.1016/j.optmat.2025.117271" class="ref-doi" target="_blank">https://doi.org/10.1016/j.optmat.2025.117271</a>
+                        </li>
+                        <li class="ref-item">
+                            Raghuvanshi, V., I, R., Ingle, A., Shashikala, H. D., and Nagaraja, H. S. (2024). A comprehensive study uncovering physical, structural, and optical properties of Cu₂O and TiO₂-reinforced borosilicate glasses as optical filters. <em>Optical Materials</em>, 153:115601.
+                            <br><a href="https://doi.org/10.1016/j.optmat.2024.115601" class="ref-doi" target="_blank">https://doi.org/10.1016/j.optmat.2024.115601</a>
+                        </li>
+                        <li class="ref-item">
+                            Fluesmeier, R., Swallow, J. W., Mauro, J. C., and Kroeker, S. (2023). A comparison of vanadium in borate versus phosphate glasses using solid-state ⁵¹V NMR. <em>Journal of the American Ceramic Society</em>, 106(1):5–17.
+                            <br><a href="https://doi.org/10.1111/jace.18745" class="ref-doi" target="_blank">https://doi.org/10.1111/jace.18745</a>
+                        </li>
+                        <li class="ref-item">
+                            Sajna, M. S., Gopi, S., Prakashan, V. P., and Saisudha, M. S. (2021). Role of V₂O₅ on structural and luminescence properties of lithium borosilicate glasses. <em>Journal of Non-Crystalline Solids</em>, 553:120489.
+                            <br><a href="https://doi.org/10.1016/j.jnoncrysol.2020.120489" class="ref-doi" target="_blank">https://doi.org/10.1016/j.jnoncrysol.2020.120489</a>
+                        </li>
+                        <li class="ref-item">
+                            Shelby, J. E. (2005). <em>Introduction to Glass Science and Technology</em>. The Royal Society of Chemistry, Cambridge, 2nd edition.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <footer style="margin-top: 3rem; text-align: center; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.04); padding-top: 1.5rem;">
+                <p>© 2026 Yash Vardhan Jha. Physics Department, National Institute of Technology Karnataka, Surathkal.</p>
+                
+            </footer>
+        </main>
+    </div>
+
+    <!-- Script file -->
+    <script src="app.js"></script>
+    
+    <!-- Render LaTeX Equations dynamically -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
